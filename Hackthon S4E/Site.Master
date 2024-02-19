@@ -50,6 +50,7 @@
                         <li class="nav-item"><a class="nav-link" runat="server" href="~/">Página Inicial</a></li>
                         <li class="nav-item"><a class="nav-link" runat="server" href="~/About">Sobre</a></li>
                         <li class="nav-item"><a class="nav-link" runat="server" href="~/Contact">Contato</a></li>
+                        <li class="nav-item"><a class="nav-link" runat="server" href="~/Empresa">Empresa</a></li>
                     </ul>
                 </div>
             </div>

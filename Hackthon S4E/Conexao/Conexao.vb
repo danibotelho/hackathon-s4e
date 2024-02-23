@@ -1,9 +1,11 @@
 ﻿Imports System.Data.SqlClient
+Imports System.IO
+Imports System.Web.Services.Description
 
 Public Class Conexao
     Public Function Executa(sql As String) As DataView
 
-        Dim conexao = ConfigurationManager.ConnectionStrings("DefaultConnection").ConnectionString
+        Dim conexao As String = ConfigurationManager.ConnectionStrings("DefaultConnection").ConnectionString
         Dim connection = New SqlConnection(conexao)
         Dim command = New SqlCommand(sql, connection)
         Dim dataAdapter = New SqlDataAdapter(command)
@@ -23,15 +25,17 @@ Public Class Conexao
 
     End Function
 
-    Public Sub ExecuteReader(sql As String)
+    Public Sub ExecuteReader(sql As String, parametros As List(Of SqlParameter))
         Dim conexao = ConfigurationManager.ConnectionStrings("DefaultConnection").ConnectionString
         Dim connection = New SqlConnection(conexao)
         Dim command = New SqlCommand(sql, connection)
         Try
             connection.Open()
             command.ExecuteReader()
+
         Catch ex As Exception
             Throw ex
+
         Finally
             connection.Close()
         End Try

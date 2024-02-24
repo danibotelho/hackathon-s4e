@@ -1,0 +1,23 @@
+﻿
+.conteudo {
+    margin: auto; 
+    width: 100%;
+    max-width: 600px;   
+}
+
+.forms {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2.5px;
+}
+
+.aligned-label {
+    text-align: left;
+    font-family: Verdana;
+}
+
+.aligned-textbox {
+    text-align: left;
+    margin-bottom: 1rem;
+}

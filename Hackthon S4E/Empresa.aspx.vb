@@ -4,8 +4,12 @@ Public Class Empresa
     Inherits System.Web.UI.Page
 
     Protected Sub Page_Load(ByVal sender As Object, e As System.EventArgs) Handles Me.Load
-
+        TXT_CNPJ.Attributes.Add("maxlength", "14")
+        TXT_InscricaoEstadual.Attributes.Add("maxlength", "8")
+        TXT_DataAbertura.Attributes.Add("maxlength", "8")
+        TXT_Telefone.Attributes.Add("maxlength", "11")
     End Sub
+
 
     Private Sub BTN_Salvar_Click(sender As Object, e As EventArgs) Handles BTN_Salvar.Click
         Try
